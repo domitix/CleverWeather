@@ -37,5 +37,5 @@ then you can start the nodejs application running from the webapp folder
 At this point you can open your browser on http://localhost:3000 and visualize data.
 
 ## Tutorial
-Follow the [tutorial](https://www.hackster.io/domitix/clever-weather-4fc8ec) and whatch the video to find out how to use CleverWeather.
+Follow the [tutorial](https://www.hackster.io/domitix/clever-weather-4fc8ec) and whatch the [video](https://youtu.be/TwIHceQEKSE) to find out how to use CleverWeather.
 
