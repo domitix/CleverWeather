@@ -6,7 +6,7 @@ $(document).ready(() => {
   const protocol = document.location.protocol.startsWith('https') ? 'wss://' : 'ws://';
   const webSocket = new WebSocket(protocol + location.host);
 
-  // A class for holding the last N points of telemetry for a device
+  // A class for holding the last 50 points of telemetry for a device
   class DeviceData {
     constructor(deviceId) {
       this.deviceId = deviceId;
@@ -62,7 +62,7 @@ $(document).ready(() => {
 
   const trackedDevices = new TrackedDevices();
 
-  // Define the chart axes
+  // Define the chart axes and the options
   const chartDataTemp = {
     datasets: [{
       fill: false,
@@ -198,7 +198,7 @@ $(document).ready(() => {
   const chartDataRain = {
     datasets: [{
       fill: false,
-      label: 'Rain',
+      label: 'Rain Height',
       yAxisID: 'Rain',
       borderColor: 'rgba(200, 0, 200, 1)',
       pointBoarderColor: 'rgba(200, 0, 200, 1)',
