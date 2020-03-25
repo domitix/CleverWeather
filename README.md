@@ -1,6 +1,6 @@
-#CleverWeather is an IoT app that allows you to create random values, send them to your Azure IoT hub and visualize them. 
+#"CleverWeather" is an IoT app that allows you to create random values, send them to your Azure IoT hub and visualize them. 
 
-##The repository contains
+##"The repository contains"
 
 * **publisher.py** randomly chooses a device to publish messages, creates random values for temperature, humidity, wind direction, wind intensity and send them to the IoT hub.
 * webapp
