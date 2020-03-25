@@ -6,7 +6,7 @@
 
 * **publisher.py** randomly chooses a device to publish messages, creates random values for temperature, humidity, wind direction, wind intensity and send them to the IoT hub.
 * webapp
-    * **server.js** is the core part of the web app. It calls the function that reads the messages sent to the IoT hub, it loads the website etc.
+    * **server.js** is the core part of the web app. It connects to the IoT hub, calls the function that reads the messages arrived at the hub and reorganize them.
     * public
         * **index.html** contains the webpage that you see.
     * js
@@ -28,5 +28,5 @@
 
 
 ## Tutorial
-Follow the [tutorial](https://www.hackster.io/domitix/clever-weather-4fc8ec) and find out how to use CleverWeather.
+Follow the [tutorial](https://www.hackster.io/domitix/clever-weather-4fc8ec) and whatch the video to find out how to use CleverWeather.
 
