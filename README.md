@@ -28,10 +28,10 @@
 
 ## How to use it
 
-You have to run publisher.py simply going in its folder and writing on the command line
+Go to the folder where there's publisher.py and write in the command line
 `python publisher.py`
 
-then you can start the nodejs application running from the webapp folder
+Open another command line, go in the webapp folder and write
 `npm start`
 
 At this point you can open your browser on http://localhost:3000 and visualize data.
