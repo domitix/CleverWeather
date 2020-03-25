@@ -35,7 +35,7 @@ server.listen(process.env.PORT || '3000', () => {
 });
 
 const eventHubReader = new EventHubReader(iotHubConnectionString, eventHubConsumerGroup);
-
+//reorganizes the messages using message arrived, the date and the device id that sent it
 (async () => {
   await eventHubReader.startReadMessage((message, date, deviceId) => {
     try {
