@@ -26,6 +26,15 @@
     * connection string of the IoT hub (not the device connection string!) set as environment parameter
     * consumer group set as environment parameter
 
+## How to use it
+
+You have to run publisher.py simply going in its folder and writing on the command line
+`python publisher.py`
+
+then you can start the nodejs application running from the webapp folder
+`npm start`
+
+At this point you can open your browser on http://localhost:3000 and visualize data.
 
 ## Tutorial
 Follow the [tutorial](https://www.hackster.io/domitix/clever-weather-4fc8ec) and whatch the video to find out how to use CleverWeather.
