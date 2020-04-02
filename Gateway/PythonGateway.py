@@ -4,10 +4,8 @@ import json
 
 brokerPort = 1886
 brokerAddress = "fec0:affe::1"
-#connection_string1 = os.getenv("IOTHUB_DEV1_CONNECTION_STRING")
-#connection_string1 = os.getenv("IOTHUB_DEV2_CONNECTION_STRING")
-connection_string1 = "HostName=CleverWeather.azure-devices.net;DeviceId=foggia_2;SharedAccessKey=pMl04JINgind65gxMUToWPljlA94rnvasCtGWZ8Nzuo="
-connection_string2 = "HostName=CleverWeather.azure-devices.net;DeviceId=rome_2;SharedAccessKey=O9m6s2yY/qA9RYrDNEcb13pSn7Q0nV+yjbKXRbP68vE="
+connection_string1 = os.getenv("IOTHUB_DEV1_CONNECTION_STRING")
+connection_string2 = os.getenv("IOTHUB_DEV2_CONNECTION_STRING")
 
 def on_connect(client,userdata,flags,rc):
 	"""
