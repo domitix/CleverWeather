@@ -41,13 +41,13 @@
 
 ## How to use it
 ### Simple modality with random values created by python
-Go to the folder where there's publisher.py and write in the command line
-`python publisher.py`
+1. Go to the folder where there's publisher.py and write in the command line
+   `python publisher.py`
   
-Open another command line, go in the webapp folder and write
-`npm start`
+2. Open another command line, go in the webapp folder and write
+   `npm start`
 
-At this point you can open your browser on http://localhost:3000 and visualize data.
+3. At this point you can open your browser on http://localhost:3000 and visualize data.
  
 ### Random values created by RIOT app
 1. **Really Small Message Broker** 
@@ -90,5 +90,5 @@ At this point you can open your browser on http://localhost:3000 and visualize d
    2. At this point you can open your browser on http://localhost:3000 and visualize data.
 
 ## Tutorial
-Follow the [tutorial](https://www.hackster.io/domitix/clever-weather-4fc8ec) and whatch the [video](https://youtu.be/TwIHceQEKSE) to find out how to use CleverWeather.
-<br/>For more information on CleverWeatherRIOTOS: [tutorial](https://www.hackster.io/domitix/cleverweather-with-riot-os-ada7fe) and [video].
+Follow the [tutorial](https://www.hackster.io/domitix/clever-weather-4fc8ec) and whatch the [video](https://youtu.be/TwIHceQEKSE) to find out how to use **CleverWeather**.
+<br/>For more information on **CleverWeatherRIOTOS**: [tutorial](https://www.hackster.io/domitix/cleverweather-with-riot-os-ada7fe) and [video].
