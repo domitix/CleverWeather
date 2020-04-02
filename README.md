@@ -50,45 +50,45 @@ Open another command line, go in the webapp folder and write
 At this point you can open your browser on http://localhost:3000 and visualize data.
  
 ### Random values created by RIOT app
-* Really Small Message Broker 
-   Compile the repository previously cloned:
-   `cd rsmb/src`
-   `make`
+1. **Really Small Message Broker** 
+   1. Compile the repository previously cloned:
+      `cd rsmb/src`
+      `make`
 
-   Copy config.conf file contained in RSMB folder to mosquitto.rsmb/rsmb/src directory. From mosquitto.rsmb/rsmb/src directory execute   the Really Small Message Broker:
-   `./broker_mqtts config.conf`
+   2. Copy config.conf file contained in RSMB folder to mosquitto.rsmb/rsmb/src directory. From mosquitto.rsmb/rsmb/src directory execute   the Really Small Message Broker:
+    `./broker_mqtts config.conf`
 
-* RIOT app
-   Copy CleverWeatherRIOTOS folder into RIOT folder. Open a second teminal in RIOT directory and create tap0, tap1 devices and tapbr0 typing:
-   `sudo ./RIOTDIR/dist/tools/tapsetup/tapsetup`
-   To check if they have been correctly created:
-   `ifconfig | grep tap`
-   Assign a site-global prefix to the tapbr0:
-   `sudo ip a a fec0:affe::1/64 dev tapbr0`
+2. **RIOT app**
+   1. Copy CleverWeatherRIOTOS folder into RIOT folder. Open a second teminal in RIOT directory and create tap0, tap1 devices and tapbr0 typing:
+      `sudo ./RIOTDIR/dist/tools/tapsetup/tapsetup`
+   2. To check if they have been correctly created:
+      `ifconfig | grep tap`
+   3. Assign a site-global prefix to the tapbr0:
+      `sudo ip a a fec0:affe::1/64 dev tapbr0`
 
-   To execute the app with tap0 device (you can also run it with tap1):
+   4. To execute the app with tap0 device (you can also run it with tap1):
    `cd CleverWeatherRIOTOS`
    `make all term PORT=tap0`
 
    * During the execution of the app: 
-      assign a site-global address with the same prefix within the RIOT native instance:
-      `ifconfig 5 add fec0:affe::99`
-      See all the possible commands of the app:
-      `help`
-      Connect to the previously created broker at port 1885:
-      `con fec0:affe::1 1885`
-      Start publishing messages with random values in <topic>:
-      `publisher <topic> `
+      * assign a site-global address with the same prefix within the RIOT native instance:
+         `ifconfig 5 add fec0:affe::99`
+      * See all the possible commands of the app:
+         `help`
+      * Connect to the previously created broker at port 1885:
+         `con fec0:affe::1 1885`
+      * Start publishing messages with random values in <topic>:
+         `publisher <topic> `
 
-* Gateway
-   open a third terminal, go to Gateway folder and type
-   `python PythonGateway.py`
+3. **Gateway**
+   1. Open a third terminal, go to Gateway folder and type
+      `python PythonGateway.py`
 
-* Web app
-   Open another command line, go in the webapp folder and write
-   `npm start`
-   At this point you can open your browser on http://localhost:3000 and visualize data.
+4. **Web app**
+   1. Open another command line, go in the webapp folder and write
+      `npm start`
+   2. At this point you can open your browser on http://localhost:3000 and visualize data.
 
 ## Tutorial
 Follow the [tutorial](https://www.hackster.io/domitix/clever-weather-4fc8ec) and whatch the [video](https://youtu.be/TwIHceQEKSE) to find out how to use CleverWeather.
-For more information on CleverWeatherRIOTOS: [tutorial](https://www.hackster.io/domitix/cleverweather-with-riot-os-ada7fe) and [video].
+<br/>For more information on CleverWeatherRIOTOS: [tutorial](https://www.hackster.io/domitix/cleverweather-with-riot-os-ada7fe) and [video].
