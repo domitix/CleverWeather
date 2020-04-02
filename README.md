@@ -20,11 +20,18 @@
 * Python
     * connection string to the IoT hub for every device set as environment parameter
     * "azure.iot.device" library
+    * "paho-mqtt" library
+* RSMB
+    * clone the [mosquitto.RSMB repository](https://github.com/eclipse/mosquitto.rsmb).
+* RIOT-OS
+    * all the requirements specified [here](https://github.com/RIOT-OS/Tutorials).
+    * clone the [RIOT repository](https://github.com/RIOT-OS/RIOT).
 * Nodejs
     * npm installed 
     * "@azure/event-hubs" extension of npm
     * connection string of the IoT hub (not the device connection string!) set as environment parameter
     * consumer group set as environment parameter
+    
 
 ## How to use it
 ### Simple modality with random values created by python
