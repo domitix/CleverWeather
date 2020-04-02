@@ -27,14 +27,17 @@
     * consumer group set as environment parameter
 
 ## How to use it
-
+### Simple modality with random values created by python
 Go to the folder where there's publisher.py and write in the command line
 `python publisher.py`
-
+  
 Open another command line, go in the webapp folder and write
 `npm start`
 
 At this point you can open your browser on http://localhost:3000 and visualize data.
+ 
+### Random values created by RIOT app
+
 
 ## Tutorial
 Follow the [tutorial](https://www.hackster.io/domitix/clever-weather-4fc8ec) and whatch the [video](https://youtu.be/TwIHceQEKSE) to find out how to use CleverWeather.
