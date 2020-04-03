@@ -66,9 +66,9 @@
    3. Assign a site-global prefix to the tapbr0:
       `sudo ip a a fec0:affe::1/64 dev tapbr0`
 
-   4. To execute the app with tap0 device (you can also run it with tap1):
+   4. To execute the app with tap0 device (you can also run it with tap1) from native:
    `cd CleverWeatherRIOTOS`
-   `make all term PORT=tap0`
+   `make all term PORT=tap0 BOARD=native`
 
    * During the execution of the app: 
       * assign a site-global address with the same prefix within the RIOT native instance:
