@@ -405,7 +405,7 @@ static int _cmd_loramac(int argc, char **argv)
         int wind_int = rand()%101;
         int rain = rand()%51;
         
-        puts("temperature %d",temp);
+        printf("temperature %d",temp);
 
         char mess[5] = {temp, hum, wind_dir, wind_int, rain};
 
