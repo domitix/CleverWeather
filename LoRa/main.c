@@ -35,6 +35,10 @@ semtech_loramac_t loramac;
    possible size (with application session and network session keys) */
 static char print_buf[LORAMAC_APPKEY_LEN * 2 + 1];
 
+int generate_random_values(int lower, int upper){
+  return (rand() % (upper+1 - lower) + lower);
+}
+
 static void _loramac_usage(void)
 {
     puts("Usage: loramac <get|set|join|tx|link_check"
@@ -52,6 +56,11 @@ static void _loramac_join_usage(void)
 static void _loramac_tx_usage(void)
 {
     puts("Usage: loramac tx <payload> [<cnf|uncnf>] [port]");
+}
+
+static void _loramac_publisher_usage(void)
+{
+    puts("Usage: loramac publisher");
 }
 
 static void _loramac_set_usage(void)
@@ -380,6 +389,12 @@ static int _cmd_loramac(int argc, char **argv)
         return 0;
     }
     else if(strcmp(argv[1],"publisher")==0){
+      /* sends randomly generates messages every 15 seconds*/
+
+      if (argc > 2){
+        _loramac_publisher_usage();
+      }
+
       uint8_t cnf = LORAMAC_DEFAULT_TX_MODE;  /* Default: confirmable */
       uint8_t port = LORAMAC_DEFAULT_TX_PORT; /* Default: 2 */
 
@@ -388,17 +403,67 @@ static int _cmd_loramac(int argc, char **argv)
 
       while(1){
         srand(time(NULL));
-        int temp = rand()%101;
-        int hum = rand()%101;
-        int wind_dir = rand()%361;
-        int wind_int = rand()%101;
-        int rain = rand()%51;
+        int temp = generate_random_values(-50,50);
+        int hum = generate_random_values(0,100);
+        int wind_dir = generate_random_values(0,360);
+        int wind_int = generate_random_values(0,100);
+        int rain = generate_random_values(0,50);
 
         char mess[5] = {temp, hum, wind_dir, wind_int, rain};
 
-        semtech_loramac_send(&loramac,(uint8_t *)mess, strlen(mess));
+        switch (semtech_loramac_send(&loramac,
+                                     (uint8_t *)mess, strlen(mess))) {
+            case SEMTECH_LORAMAC_NOT_JOINED:
+                puts("Cannot send: not joined");
+                return 1;
 
-        xtimer_sleep(5);
+            case SEMTECH_LORAMAC_DUTYCYCLE_RESTRICTED:
+                puts("Cannot send: dutycycle restriction");
+                return 1;
+
+            case SEMTECH_LORAMAC_BUSY:
+                puts("Cannot send: MAC is busy");
+                return 1;
+
+            case SEMTECH_LORAMAC_TX_ERROR:
+                puts("Cannot send: error");
+                return 1;
+        }
+
+        /* wait for receive windows */
+        switch (semtech_loramac_recv(&loramac)) {
+            case SEMTECH_LORAMAC_DATA_RECEIVED:
+                loramac.rx_data.payload[loramac.rx_data.payload_len] = 0;
+                printf("Data received: %s, port: %d\n",
+                       (char *)loramac.rx_data.payload, loramac.rx_data.port);
+                break;
+
+            case SEMTECH_LORAMAC_DUTYCYCLE_RESTRICTED:
+                puts("Cannot send: dutycycle restriction");
+                return 1;
+
+            case SEMTECH_LORAMAC_BUSY:
+                puts("Cannot send: MAC is busy");
+                return 1;
+
+            case SEMTECH_LORAMAC_TX_ERROR:
+                puts("Cannot send: error");
+                return 1;
+
+            case SEMTECH_LORAMAC_TX_DONE:
+                puts("TX complete, no data received");
+                break;
+        }
+
+        if (loramac.link_chk.available) {
+            printf("Link check information:\n"
+                   "  - Demodulation margin: %d\n"
+                   "  - Number of gateways: %d\n",
+                   loramac.link_chk.demod_margin,
+                   loramac.link_chk.nb_gateways);
+        }
+
+        xtimer_sleep(15);
       }
 
 
