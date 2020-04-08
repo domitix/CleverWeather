@@ -22,7 +22,6 @@
 #include <inttypes.h>
 #include <random.h>
 #include <time.h>
-#include <unistd.h>
 #include "msg.h"
 #include "shell.h"
 #include "fmt.h"
@@ -399,7 +398,7 @@ static int _cmd_loramac(int argc, char **argv)
 
         semtech_loramac_send(&loramac,(uint8_t *)mess, strlen(mess));
 
-        sleep(7);
+        xtimer_sleep(5);
       }
 
 
