@@ -22,6 +22,7 @@
 #include <inttypes.h>
 #include <random.h>
 #include <time.h>
+#include <unistd.h>
 #include "msg.h"
 #include "shell.h"
 #include "fmt.h"
