@@ -35,10 +35,6 @@ semtech_loramac_t loramac;
    possible size (with application session and network session keys) */
 static char print_buf[LORAMAC_APPKEY_LEN * 2 + 1];
 
-int generate_random_values(int lower, int upper){
-  return (rand() % (upper+1 - lower) + lower);
-}
-
 static void _loramac_usage(void)
 {
     puts("Usage: loramac <get|set|join|tx|link_check"
@@ -403,11 +399,11 @@ static int _cmd_loramac(int argc, char **argv)
 
       while(1){
         srand(time(NULL));
-        int temp = generate_random_values(-50,50);
-        int hum = generate_random_values(0,100);
-        int wind_dir = generate_random_values(0,360);
-        int wind_int = generate_random_values(0,100);
-        int rain = generate_random_values(0,50);
+        int temp = rand()%101;
+        int hum = rand()%101;
+        int wind_dir = rand()%361;
+        int wind_int = rand()%101;
+        int rain = rand()%51;
 
         char mess[5] = {temp, hum, wind_dir, wind_int, rain};
 
