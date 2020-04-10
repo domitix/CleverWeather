@@ -1,5 +1,6 @@
 # CleverWeather
 #### IoT app that allows you to create random values, send them to your Azure IoT hub and visualize them. 
+##### CleverWeather was created for Internet of Things course at Sapienza University of Rome.
 
 
 ## Important elements of the repository
@@ -15,8 +16,12 @@
    * **main.c** runs the RIOT app. Use publisher command to start publishing random messages in a topic of your choice.
 * RSMB
    * **config.conf** is the configuration file of RSMB.
+* LoRa
+   * **main.c** RIOT app that connects to TTN using LoRaWAN protocol. Use "loramac publisher" command to start publishing random messages.
 * Gateway
    * **PythonGateway.py** connects to RSMB and sends the messages received to the hub.
+   * **TTNGateway.py** connects to TTN and sens messages received to the hub.
+   * **TTNconfigurations.ini** configuration file for TTNGateway.py. Remember to fill it before running TTNGateway.py.
  
 
 ## Requirements
@@ -49,7 +54,7 @@
 
 3. At this point you can open your browser on http://localhost:3000 and visualize data.
  
-### Random values created by RIOT app
+### Random values created by RIOT app and MQTTSN protocol
 1. **Really Small Message Broker** 
    1. Compile the repository previously cloned:
       `cd rsmb/src`
@@ -88,7 +93,22 @@
    1. Open another command line, go in the webapp folder and write
       `npm start`
    2. At this point you can open your browser on http://localhost:3000 and visualize data.
+   
+### Random values created by RIOT app and LoRaWAN protocol
+1. **IoT-LAB and TTN app 
+   1. Follow the [tutorial]()
+
+2. **Gateway**
+   1. Go to Gateway folder and fill TTNconfigurations.ini with the values of your TTN app, TTN devices and IoT Hub.
+   2. Open another terminal there and type
+      `python TTNGateway.py`
+3. **Web app**
+   1. Open another command line, go in the webapp folder and write
+      `npm start`
+   2. At this point you can open your browser on http://localhost:3000 and visualize data.
+
 
 ## Tutorial
 Follow the [tutorial](https://www.hackster.io/domitix/clever-weather-4fc8ec) and whatch the [video](https://youtu.be/TwIHceQEKSE) to find out how to use **CleverWeather**.
 <br/>For more information on **CleverWeatherRIOTOS**: [tutorial](https://www.hackster.io/domitix/cleverweather-with-riot-os-ada7fe) and [video](https://youtu.be/ikV0G87yPIo).
+**CleverweatherLoRa** [tutorial]() and [video]().
