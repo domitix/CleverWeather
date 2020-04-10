@@ -111,4 +111,4 @@
 ## Tutorial
 Follow the [tutorial](https://www.hackster.io/domitix/clever-weather-4fc8ec) and whatch the [video](https://youtu.be/TwIHceQEKSE) to find out how to use **CleverWeather**.
 <br/>For more information on **CleverWeatherRIOTOS**: [tutorial](https://www.hackster.io/domitix/cleverweather-with-riot-os-ada7fe) and [video](https://youtu.be/ikV0G87yPIo).
-**CleverweatherLoRa** [tutorial](https://www.hackster.io/domitix/cleverweather-with-lora-8cc6e8) and [video]().
+<br/>**CleverweatherLoRa** [tutorial](https://www.hackster.io/domitix/cleverweather-with-lora-8cc6e8) and [video](https://youtu.be/Im5DIP9dlfg).
