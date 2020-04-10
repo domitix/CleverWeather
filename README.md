@@ -95,7 +95,7 @@
    2. At this point you can open your browser on http://localhost:3000 and visualize data.
    
 ### Random values created by RIOT app and LoRaWAN protocol
-1. **IoT-LAB and TTN app 
+1. **IoT-LAB and TTN app** 
    1. Follow the [tutorial](https://www.hackster.io/domitix/cleverweather-with-lora-8cc6e8)
 
 2. **Gateway**
