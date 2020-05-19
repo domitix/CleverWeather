@@ -1,3 +1,7 @@
+# User Activity Recognition with Azure
+#### Azure Web App that takes the values from the accelerometer of the smarphone using generic sensor API and sends them to Azure IoT Hub. Two types of implementations: edge-based and cloud based. 
+[Cloude-based implementation](), [edge-based implementation](), [video](https://youtu.be/OGusVpQa6ug) and [tutorial](https://www.hackster.io/domitix/user-activity-recognition-with-azure-4f7c34 )
+
 # CleverWeather
 #### IoT app that allows you to create random values, send them to your Azure IoT hub and visualize them. 
 ##### CleverWeather was created for Internet of Things course at Sapienza University of Rome.
