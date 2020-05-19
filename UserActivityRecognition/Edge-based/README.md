@@ -6,7 +6,7 @@ In edge-based implementation the computations to determine if the user is standi
 * **server.js** starts the whole web app, gets the messages from the smartphone and sends them to the hub
 * public
   * **index.html** contains the webpage that you see
-  * **accelerometer.js** reads the values of the accelerometer of the smartphone and sends them to the server
+  * **accelerometer.js** reads the values of the accelerometer, determine the activity of the user and sends it to the server
 * webapp
   * **server.js** is the core part of data visualization. It connects to the IoT hub, calls the function that reads the messages arrived at the hub and reorganize them.
   * public
