@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Accelerometer</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+    <meta name="description" content="Accelerometer">
+    <meta name="theme-color" content="#0071c5">
+
+    <!--<link rel="manifest" href="manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">-->
+    <meta name="application-name" content="Accelerometer">
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous" type="text/javascript" charset="utf-8"></script>
+    <script src="accelerometer.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>
+    <h1>Accelerometer</h1>
+    <div>
+        <span id="frequency">Frequency: 1 Hz</span>
+    </div>
+    <div>
+        <span id="errorMessage"></span>
+    </div>
+    <div>
+        <span>X axis: </span>
+        <span id="xaxis"></span>
+    </div>
+    <div>
+        <span>Y axis: </span>
+        <span id="yaxis"></span>
+    </div>
+    <div>
+        <span>Z axis:</span>
+        <span id="zaxis"></span>
+    </div>
+    <div>
+        <span id="activity" style="font-weight: bold;color: blue;"></span>
+    </div>
+</body>
+
+</html>
