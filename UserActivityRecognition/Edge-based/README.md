@@ -25,7 +25,7 @@ In edge-based implementation the computations to determine if the user is standi
     * consumer group set as environment parameter
     
 ## How to use it
-1. Run https://clouduseractivityrecognition.azurewebsites.net/ in the browser of your smartphone (PCs don't have accelerometer)
+1. Run https://edgeuseractivityrecognition.azurewebsites.net/ in the browser of your smartphone (PCs don't have accelerometer)
 2. Open a terminal in webapp folder and run `npm install` and `npm start`.
 3. Open your browser on http://localhost:3000 and visualize data.
 
