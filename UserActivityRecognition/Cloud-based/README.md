@@ -1,4 +1,5 @@
 # Cloud-based implementation
+In cloud-based implementation the values of the accelerometer are sent to the hub and the computations to determine if the user is standing still or not are done in the cloud.
 
 ## Important elements of the repository
 
