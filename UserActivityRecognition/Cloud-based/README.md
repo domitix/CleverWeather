@@ -29,4 +29,4 @@
 3. Open your browser on http://localhost:3000 and visualize data.
 
 ## Tutorial
-For more information check out the [tutorial](https://www.hackster.io/domitix/user-activity-recognition-with-azure-4f7c34) and watch the [video](https://www.youtube.com/watch?v=OGusVpQa6ug.
+For more information check out the [tutorial](https://www.hackster.io/domitix/user-activity-recognition-with-azure-4f7c34) and watch the [video](https://www.youtube.com/watch?v=OGusVpQa6ug).
