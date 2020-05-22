@@ -33,17 +33,14 @@ $(document).ready(() => {
       setInterval(function(){
         //check if the difference between previous and last data is > 0.6
         if (lastX-sensor.x > 0.6 || sensor.x - lastX > 0.6 || lastY-sensor.y > 0.6 || sensor.y - lastY > 0.6 || lastZ-sensor.z > 0.6 || sensor.z - lastZ > 0.6 ){
-          //user is not standing stil
+          //user is not standing stil, update every second the label in the webapp with the last activity
           act = "not";
           activ.textContent = "Moving";
         }else{
-          //user is standing still
+          //user is standing still, update every second the label in the webapp with the last activity
           act = "still";
           activ.textContent = "Standing still";
         }
-        
-        //send the data to the server using the socket
-        //socket.emit("activity",message);
       }, 1000);
 
       setInterval(function(){
@@ -68,7 +65,7 @@ $(document).ready(() => {
       }, 5000);
 
       setInterval(function(){
-        //update sent to the hub every 1 min
+        //update sent to the hub every 30 seconds
         if (act == "not"){
           //user is not standing stil
           var message = {
