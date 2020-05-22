@@ -24,7 +24,7 @@ $(document).ready(() => {
       yax.textContent = y.toString();
       zax.textContent = z.toString();
 
-      //create the message and send it to server.js using the socket every 30 seconds
+      //create the message and send it to server.js using the socket every 10 seconds
       setInterval(function(){
         var message = {
           xaxis: x,
@@ -35,7 +35,7 @@ $(document).ready(() => {
         socket.emit("lastaccelerometer",message);
       }, 10000);
       
-      //create the message and send it to server.js using the socket every 60 seconds
+      //create the message and send it to server.js using the socket every 30 seconds
       setInterval(function(){
         var message = {
           xaxis: x,
