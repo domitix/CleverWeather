@@ -150,7 +150,7 @@ $(document).ready(() => {
         id: 'Zaxis',
         type: 'linear',
         scaleLabel: {
-          labelString: 'm/s',
+          labelString: 'm/s^2',
           display: true,
         },
         position: 'left',
