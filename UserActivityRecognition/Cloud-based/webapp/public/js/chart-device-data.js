@@ -82,7 +82,7 @@ $(document).ready(() => {
         id: 'Xaxis',
         type: 'linear',
         scaleLabel: {
-          labelString: 'm/s',
+          labelString: 'm/s^2',
           display: true,
         },
         position: 'left',
@@ -116,7 +116,7 @@ $(document).ready(() => {
         id: 'Yaxis',
         type: 'linear',
         scaleLabel: {
-          labelString: 'm/s',
+          labelString: 'm/s^2',
           display: true,
         },
         position: 'left',
