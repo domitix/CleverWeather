@@ -14,7 +14,7 @@ var connectionString = "";
 var client = DeviceClient.fromConnectionString(connectionString, Mqtt);
 
 const app = express();
-const port =process.env.PORT || '3000';;
+const port =process.env.PORT || '3000';
 
 //index.html and accelerometer.js are in public folder
 app.use(express.static('public'));
